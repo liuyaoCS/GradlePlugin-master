@@ -1,0 +1,15 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        flatDir {
+            name 'localRepository'
+            dir "helloworld/localRepository/libs"
+        }
+    }
+    dependencies {
+        classpath 'com.mime.ly:helloworld:1.2'
+
+    }
+}
+

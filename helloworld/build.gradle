@@ -1,0 +1,25 @@
+apply plugin: 'java'//导入java插件用于，编译打包我们的插件
+
+group = "com.mime.ly"
+version='1.2'
+
+dependencies {
+    //导入Gradle的api
+    compile gradleApi()
+}
+
+uploadArchives{
+    repositories{
+        flatDir{
+            name "localRepository"
+            dir "localRepository/libs"
+        }
+    }
+}
+afterEvaluate {
+    build {
+        doLast {
+            uploadArchives.execute()
+        }
+    }
+}

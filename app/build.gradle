@@ -1,0 +1,5 @@
+apply plugin: 'com.mime.ly.helloworld'
+
+task testplugin(dependsOn: writeHello) << {
+    println "test over"
+}
